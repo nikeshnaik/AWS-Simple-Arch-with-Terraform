@@ -16,7 +16,7 @@ module "vpc" {
 module "webserver_security_group" {
 
   source = "terraform-aws-modules/security-group/aws"
-  vpc_id = module.vpc.vpd_id
+  vpc_id = module.vpc.vpc_id
   ingress_rules = [{
     port        = 80
     cidr_blocks = ["0.0.0.0/0"] ## Accept any IP on port 80 

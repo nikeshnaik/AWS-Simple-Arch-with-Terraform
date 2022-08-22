@@ -10,3 +10,16 @@ variable "region" {
   default     = "us-west-2"
 
 }
+
+variable "cidr_block" {
+
+  description = "CIDR Block for private IPs"
+  type        = string
+}
+
+variable "public_subnets" {
+  description = "Public subnet"
+  type        = list(string)
+
+}
+
